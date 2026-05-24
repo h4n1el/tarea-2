@@ -73,29 +73,79 @@ public void Registrar()
     Vehiculo veh = new Vehiculo();
 
     System.out.println("=== Registrar Auto ===");
-    System.out.println("ingrese la placa del vehiculo: ");
-    String p = boton.nextLine();
+
+    
+    String p;
+    do{
+        System.out.println("ingrese la placa del vehiculo: ");
+        p = boton.nextLine();
+        if(p.isEmpty())
+        {
+           System.out.println("no puede estar vacia la placa"); 
+        }
+
+    }while(p.isEmpty());
     
     
-    System.out.println("ingresa la marca del vehiculo: ");
-    String m = boton.nextLine();
+    String m;
+    do{
+        System.out.println("ingresa la marca del vehiculo");
+        m = boton.nextLine();
+        if(m.isEmpty())
+        {
+            System.out.println("no puede estar vacia la marca");
+        }
+
+    }while(m.isEmpty());
+    
+    String M;
+    do{
+        System.out.println("ingresa el modelo del vehiculo: ");
+        M = boton.nextLine();
+        if(M.isEmpty())
+        {
+            System.out.println("no puede estar vacio el modelo");
+        }
+
+    }while(M.isEmpty());
     
 
-    System.out.println("ingresa el modelo del vehiculo: ");
-    String M = boton.nextLine();
+    
+    int a;
+    do{
+        System.out.println("ingresa el ano del vehiculo: ");
+        a = boton.nextInt();
+        if(a < 0)
+        {
+            System.out.println("no puede estar vacio el ano");
+        }
+
+    }while(a < 0);
     
 
-    System.out.println("ingresa el ano del vehiculo: ");
-    int a = boton.nextInt();
     
-    boton.nextLine();
+    String c;
+    do{
+        System.out.println("ingresa el color del vehiculo: ");
+        c = boton.nextLine();
+        if(c.isEmpty())
+        {
+            System.out.println("no puede estar vacio");
+        }
+        
 
-    System.out.println("ingresa el color del vehiculo: ");
-    String c = boton.nextLine();
+    }while(c.isEmpty());
     
+    int P;
+    do{
+        System.out.println("ingresa el precio del vehiculo: ");
+        P = boton.nextInt();
+        if(P < 0)
+        {
+            System.out.println("no puede estar vacio el precio");
+        }
 
-    System.out.println("ingresa el precio del vehiculo: ");
-    int P = boton.nextInt();
+    }while(P < 0);
     
     boton.nextLine();
 
